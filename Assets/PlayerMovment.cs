@@ -18,7 +18,26 @@ public class PlayerMovment : MonoBehaviour
        if (Input.GetKeyDown("space"))
        {
            GetComponent<Rigidbody>().velocity = new Vector3(0,5,0); // to move player in one direction only vector 3 ==> y axis
-           
+       }
+
+       if (Input.GetKey("up"))
+       {
+           GetComponent<Rigidbody>().velocity = new Vector3(0,0,5); // to move player in one direction only vector z ==> y axis
+       }
+       
+       if (Input.GetKey("right"))
+       {
+           GetComponent<Rigidbody>().velocity = new Vector3(5,0,0); // to move player in one direction only vector x ==> y axis
+       }
+       
+       if (Input.GetKey("left"))
+       {
+           GetComponent<Rigidbody>().velocity = new Vector3(-5,0,0); // to move player in one direction only vector x ==> y axis
+       }
+       
+       if (Input.GetKey("down"))
+       {
+           GetComponent<Rigidbody>().velocity = new Vector3(0,0,-5); // to move player in one direction only vector x ==> y axis
        }
     }
 }
